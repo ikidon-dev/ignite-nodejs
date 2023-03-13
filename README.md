@@ -16,6 +16,7 @@
 
 - <strong>Start with A:</strong> It is a project created during class. (during studies)
   - [A-01-nodejs-fundamentals](https://github.com/SystemOfLima/ignite-nodejs/tree/main/A-01-nodejs-fundamentals)
+  - [A-02-api-rest-nodejs](https://github.com/SystemOfLima/ignite-nodejs/tree/main/A-02-api-rest-nodejs)
 - <strong>Start with E:</strong> It's an extra project. (no required)
   - [E-01-nodejs-fundamentals](https://github.com/SystemOfLima/ignite-nodejs/tree/main/E-01-nodejs-fundamentals)
 - <strong>Start with M:</strong> Is a main project. (required)
