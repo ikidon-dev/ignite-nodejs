@@ -1,0 +1,32 @@
+name: Run E2E Test - IGNITE API SOLID
+
+on: [push]
+
+jobs:
+  run-e2e-test:
+    name: Run E2E Test
+    runs-on: ubuntu-latest
+
+    services:
+      postgresql:
+        container_name: api-solid-postgresql
+        image: bitnami/postgresql
+        ports:
+          - 5432:5432
+        environment:
+          - POSTGRESQL_USERNAME=docker
+          - POSTGRESQL_PASSWORD=docker
+          - POSTGRESQL_DATABASE=a_api_solid
+
+    step:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - run: npm cli
+      - run: npm run test:e2e
+        env:
+          JWT_SECRET: testing
+          DATABASE_URL: "postgresql://docker:docker@localhost:5432/a_api_solid?schema=public"
